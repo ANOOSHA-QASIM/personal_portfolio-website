@@ -8,7 +8,6 @@ import CollaborationButton from './ui/CollaborationButton'
 
 const Hero = () => {
   return (
-    // Added pt-32 for mobile to push content below Navbar
     <section className='relative w-full min-h-screen flex items-center justify-center px-6 md:px-16 overflow-hidden bg-darkBg pt-32 md:pt-0' id="home">
 
       {/* --- Background Floating Light Shades --- */}
@@ -26,21 +25,23 @@ const Hero = () => {
       {/* --- Content Container --- */}
       <div className='max-w-[1400px] w-full flex flex-col md:flex-row items-center justify-between gap-10 md:gap-12 z-10'>
 
-        {/* RIGHT SIDE (Image): Order-1 on mobile, now with extra breathing room */}
-        <div className='flex-1 flex justify-center md:justify-end items-center order-1 md:order-2 mb-4 md:mb-0'>
+        {/* RIGHT SIDE (Image) - Added a simple Fade In */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className='flex-1 flex justify-center md:justify-end items-center order-1 md:order-2 mb-4 md:mb-0'
+        >
           <div className='relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[420px] md:h-[420px]'>
 
-            {/* Layer 1: Deep Base Glow */}
             <div className='absolute inset-[-15px] bg-teal/20 blur-[60px] md:blur-[100px] rounded-full' />
 
-            {/* Layer 2: Animated Pulse Glow */}
             <motion.div
               animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className='absolute inset-[-10px] bg-teal/25 blur-[40px] md:blur-[60px] rounded-full'
             />
 
-            {/* Main Image Container */}
             <motion.div
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.4 }}
@@ -55,10 +56,15 @@ const Hero = () => {
               />
             </motion.div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* LEFT SIDE: Text Content */}
-        <div className='flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-5 order-2 md:order-1'>
+        {/* LEFT SIDE: Text Content - Added Light Slide Up */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className='flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-5 order-2 md:order-1'
+        >
           <div className='inline-block rounded-full px-4 py-1 bg-teal/10 border border-teal/20 text-teal font-bold text-xs md:text-sm w-fit'>
             👋 Hi there! I'm
           </div>
@@ -91,7 +97,7 @@ const Hero = () => {
               link="#contact"
             />
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

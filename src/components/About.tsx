@@ -12,10 +12,10 @@ const About = () => {
 
       <div className='w-full max-w-5xl mx-auto'>
         
-        {/* --- HEADING WITH DYNAMIC SIDE LINES --- */}
+        {/* --- HEADING --- */}
         <SectionHeading>ABOUT <span className='text-teal'>ME</span></SectionHeading>
 
-        {/* --- VERTICAL TIMELINE LAYOUT (Left Aligned) --- */}
+        {/* --- VERTICAL TIMELINE LAYOUT --- */}
         <div className='relative max-w-3xl mx-auto md:ml-24'>
           
           {/* Left Side Vertical Line */}
@@ -23,10 +23,12 @@ const About = () => {
 
           <div className='flex flex-col gap-14'>
             
-            {/* 1. Intro Tagline */}
+            {/* 1. Intro Tagline - Lightened Animation */}
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 15 }} // Reduced distance
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} // Only animates once
+              transition={{ duration: 0.6, ease: "easeOut" }}
               className='relative pl-10'
             >
                 <div className='absolute left-[-5.5px] top-2 w-3 h-3 rounded-full bg-darkBg border-2 border-teal shadow-[0_0_8px_#14b8a6] z-10' />
@@ -35,11 +37,12 @@ const About = () => {
                 </p>
             </motion.div>
 
-            {/* 2. My Journey Detail */}
+            {/* 2. My Journey Detail - Lightened Animation */}
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.1 }}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
               className='relative pl-10 space-y-6'
             >
                 <div className='absolute left-[-5.5px] top-2 w-3 h-3 rounded-full bg-darkBg border-2 border-teal z-10' />
@@ -58,11 +61,12 @@ const About = () => {
                 </div>
             </motion.div>
 
-            {/* 3. Mission Box (Sober & Balanced) */}
+            {/* 3. Mission Box - Lightened Animation */}
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               className='relative pl-10'
             >
                 <div className='absolute left-[-5.5px] top-2 w-3 h-3 rounded-full bg-darkBg border-2 border-teal z-10' />
