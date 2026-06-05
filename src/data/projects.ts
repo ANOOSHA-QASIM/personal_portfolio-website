@@ -4,7 +4,7 @@ export interface Project {
   techStack: string[];
   liveLink?: string;
   githubLink: string;
-  image: string; 
+  image: string;
 }
 
 export const featuredProjects: Project[] = [
@@ -14,7 +14,7 @@ export const featuredProjects: Project[] = [
     techStack: ["Next.js", "Claude Code", "Neon DB", "FastAPI"],
     liveLink: "https://phase3-todo-chatbot.vercel.app/",
     githubLink: "https://github.com/ANOOSHA-QASIM/phase3_todo_chatbot",
-    image: "/todos.png", 
+    image: "/todos.png",
   },
   {
     title: "24/7 Personal AI Employee",
@@ -30,5 +30,14 @@ export const featuredProjects: Project[] = [
     liveLink: "https://e-commerce-aq.vercel.app/",
     githubLink: "https://github.com/ANOOSHA-QASIM/e-commerce",
     image: "/ecommerce.png",
-  }
+  },
+  {
+    title: "Karigar AI",
+    description: "Built for the Google AI Seekho Competition using AI-assisted vibe coding. An AI-powered platform that connects users with skilled workers through voice-enabled search and Urdu/English support.",
+    techStack: ["Next.js", "Google AI Studio", "Cloud Run", "AI"],
+    liveLink: "https://my-karigar-ai-app-488012131188.asia-south1.run.app/",
+    githubLink: "https://github.com/ANOOSHA-QASIM/my-karigar-ai-app",
+    image: "/Karigar-AI.png",
+  },
+
 ];
