@@ -35,7 +35,7 @@ export const featuredProjects: Project[] = [
     title: "Karigar AI",
     description: "Built for the Google AI Seekho Competition using AI-assisted vibe coding. An AI-powered platform that connects users with skilled workers through voice-enabled search and Urdu/English support.",
     techStack: ["Next.js", "Google AI Studio", "Cloud Run", "AI"],
-    liveLink: "https://my-karigar-ai-app-488012131188.asia-south1.run.app/",
+    liveLink: "",
     githubLink: "https://github.com/ANOOSHA-QASIM/my-karigar-ai-app",
     image: "/Karigar-AI.png",
   },
